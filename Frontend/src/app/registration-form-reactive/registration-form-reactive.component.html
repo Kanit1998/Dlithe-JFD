@@ -1,0 +1,41 @@
+<form [formGroup]="registrationForm">
+    <div class="form-group">
+        <label>Name : </label>
+        <input type="text" class="form-control" formControlName="firstName"/>
+     
+        <div *ngIf ="registrationForm.controls['firstName'].touched && registrationForm.controls['firstName'].hasError('required') ">
+            <span class="is-invalid">Name is required</span>
+        </div>
+    </div>
+
+    <div class ="form-group">
+        <label>Phone Number : </label>
+        <input type="number" class="form-control" formControlName="phoneNumber"/>
+     <div *ngIf =" submitted && registrationForm.controls['phoneNumber'].hasError('required')">
+       <span class ="is-invalid">phone number is required</span>
+    </div>
+    <div *ngIf ="registrationForm.controls['phoneNumber'].dirty && registrationForm.controls['phoneNumber'].invalid">
+        Mobile number should have 10 digit
+    </div>
+    
+    <div class ="form-group">
+    <label>Password : </label>
+    <input type="password" class="form-control" formControlName="pass"/>
+    </div>
+
+    <div class ="form-group">
+        <label>Confirm Password : </label>
+        <input type="password" class="form-control" formControlName="cnfpass"/>
+        <div *ngIf= " registrationForm.errors">
+            <div *ngIf= "registrationForm.errors['doNotMatch']"> Password do not match </div>
+        </div>
+
+        </div>
+        <div class=" form-group">
+        <button type="button" [disabled] =" registrationForm.invalid">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+<!-- [formGroup]="registrationForm" -->

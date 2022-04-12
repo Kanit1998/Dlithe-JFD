@@ -1,0 +1,16 @@
+<p>Menu List</p>
+<!-- <ul>
+    <li *ngFor="let item of menuitem"><input type="checkbox"[(ngModel)]="item">{{item.item}}</li>
+    <button type="submit">submit</button>
+</ul> -->
+
+<div class="foodList">
+    <div *ngFor = "let  dishlist of  MenuList">
+        <input type="checkbox" (change)="onclick($event)" value="{{dishlist.itemName}}"/>{{dishlist.itemName}}
+        <br>
+    </div>
+    <br>
+    <div>
+        <button type="button" (click)="getData()">Order Now</button>
+    </div>
+</div>

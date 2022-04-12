@@ -1,0 +1,55 @@
+{{ registrationModel | json}}
+<form #registrationForm="ngForm">
+    <div class="form-group"> 
+        <label for ="Name">Name* </label>
+        <input type ="text" #Name="ngModel"  name="name " placeholder="Name" class="form-control" 
+         [(ngModel)]="registrationModel.Name" 
+        [class.is-invalid]="Name.valid" required />
+        <div *ngIf="Name.invalid && Name.touched" >Name is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for ="number">Number</label>
+        <input type ="number" #number="ngModel"  name="number" placeholder="phone number" class="form-control"  
+        [(ngModel)]="registrationModel.number"
+        [class.is-invalid]="number.valid"
+        required/>
+        <div *ngIf="number.invalid && number.touched" >phone number  is required</div>
+    </div>
+    <div class="form-group">
+        <label for ="Email-Id">Email-ID</label>
+        <input type ="text" #email="ngModel" name="email" placeholder="enter you email" class="form-control"  
+        [(ngModel)]="registrationModel.email"
+        [class.is-invalid]="email.valid"
+        required/>
+        <div *ngIf="email.invalid && email.touched" >phone number  is required</div>
+    </div>
+    <div class="form-group">
+        <label for="DateOFBirth">D.O.B:</label>
+        <input type="date"  #DateOFBirth="ngModel" name="DateOFBirth" placeholder="enter your date of birth" class="form-control" 
+        [(ngModel)]="registrationModel.DateOFBirth"
+        [class.is-invalid]="DateOFBirth.valid"
+        required/>
+        <div  *ngIf="DateOFBirth.invalid && DateOFBirth.touched" >phone number  is required</div>
+    </div>
+    <div class="form-group">
+        <label for ="Adress">Adress</label>
+        <input type ="text" #DateOFBirth="ngModel"  name="adress" placeholder="enter your address" class="form-control"  
+        [(ngModel)]="registrationModel.adress"/> 
+    </div>
+    
+        <div class="form-group">
+            <label for="city">City</label>
+        <select #city="ngModel" name="city"  [(ngModel)]="registrationModel.city" class="form-control">
+            <option>Select City</option>
+            <option *ngFor="let city of listOfCity">{{city}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        
+        <label for ="pincode">Pincode</label>
+        <input type ="number" #pincode ="ngModel" name="pincode" placeholder="enter your pincode" class="form-control"  
+        [(ngModel)]="registrationModel.pincode"/> 
+    </div>
+    <button class="btn">Search</button>
+</form>
