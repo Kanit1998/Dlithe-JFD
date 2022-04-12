@@ -1,0 +1,17 @@
+nav a {
+  text-decoration: none;
+  color: #002e5b;
+  font-size: 18px;
+  padding: 25px;
+  display: inline-block;
+}
+
+header {
+  overflow: hidden;
+  background-color: #fde428;
+  margin-bottom: 50px;
+  
+}
+
+.container{
+}
