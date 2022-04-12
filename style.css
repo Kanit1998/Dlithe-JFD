@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+	background-color: #0000001a;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+/*----------header-part----------*/
+
+	
+
+.logo{
+	color:black;
+	padding:32px;
+	letter-spacing:5px;
+}
+.nav-bar{
+	float:right;
+}
+.col-7 ul li{
+	list-style:none;
+	display:inline;
+	padding:20px;
+}
+.col-7 ul li a{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+	letter-spacing:5px;
+}
+.col-7 ul li a:hover{
+	background-color:#A6B2B5;
+	padding:10px;
+}
+/*-------------banner---------------*/
+.banner {
+	background-image: url('../images/kkk.jpg');
+	height: 1000px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity:0.8;
+}
+/*----------------about---------------------*/
+
+.abt{
+padding:40px;
+}
+.about_img {
+	max-width: 100%;
+
+}
+.right h3{
+	text-align:center;
+	letter-spacing:5px;
+
+	
+}
+.heading {
+	text-align: center;
+	letter-spacing: 5px;
+}
+.p1{
+	line-height: 30px;
+}
+.p2{
+	line-height: 30px;
+	color:gray;
+}
+/*--------------------menu----------------------*/
+
+.mnu{
+padding:40px;
+}
+.menu_right{
+	text-align:center;
+
+}
+.menu_img{
+width:100%;
+}
+.menu_h1{
+	text-align:center;
+	letter-spacing:5px;
+	background-image: linear-gradient( to left, skyblue, #cccccc70);
+}
+.black{
+	letter-spacing:5px;
+    margin-left: 50px;
+}
+.gray{
+	color:gray;
+	margin-left: 47px;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+/*------------------contact-----------------------*/
+
+.contact_ {
+	padding: 40px;
+}
+.contact_ p{
+	line-height:30px;
+}
+.blue{
+	color:gray;
+}
+input{
+	border:none;
+	padding:8px;
+	width:100%;
+}
+.p_text{
+	border-bottom:1px solid gray;
+	padding:8px;
+}
+.btn {
+	border: none;
+	background-image: linear-gradient( to left, skyblue, #cccccc70);
+	padding: 10px;
+	width: 150px;
+	font-size: initial;
+}
+.btn:hover{
+	background:#cccc;
+	cursor:pointer;
+}
+/*--------footer--------*/
+.footer{
+	
+	background-image: linear-gradient( to left, skyblue, #cccccc70);
+}
+.ftr{
+	text-align:center;
+	padding:60px;
+}
+div a img {
+	width: 30px;
+	margin:5px;
+}
+
+
+
+
+
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 74%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+  
